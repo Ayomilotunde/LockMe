@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 28
+    buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.sanxynet.lockme"
         minSdkVersion 19
@@ -9,20 +10,55 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        def appId = project.hasProperty('appId') ? applicationId :
+                (System.getenv('APP_ID') ?: "\"\"")
+        buildConfigField "String", "APP_ID", appId
+
+        def clientKey = project.hasProperty('clientKey') ? clientKey :
+                (System.getenv('CLIENT_KEY') ?: "\"\"")
+        buildConfigField "String", "CLIENT_KEY", clientKey
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        debug {
+            testCoverageEnabled = true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0-alpha4', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha05'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    // Parse SDK
+    implementation 'com.github.parse-community.Parse-SDK-Android:parse:1.19.0'
+    // Lollipin
+    implementation('com.github.omadahealth:lollipin:2.1.0@aar') {
+        transitive = true
+    }
+    //Lollipop dialogs https://github.com/lewisjdeane/L-Dialogs and buttons, animations etc...
+    implementation 'uk.me.lewisdeane.ldialogs:ldialogs:1.2.0@aar'
+    // Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    // Pattern, Pin and Fingerprint
+    implementation 'com.andrognito.patternlockview:patternlockview:1.0.0'
+    implementation 'com.amirarcane.lock-screen:lockscreen:2.0.0'
+    implementation 'com.github.thealeksandr:PFLockScreen-Android:1.0.0-beta3'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0-beta01'
+    implementation 'androidx.vectordrawable:vectordrawable-animated:1.1.0-beta01'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-alpha05'
+    implementation 'androidx.exifinterface:exifinterface:1.1.0-alpha01'
+    implementation 'com.google.android.material:material:1.1.0-alpha06'
 }
