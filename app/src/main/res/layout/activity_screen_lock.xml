@@ -5,21 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/black"
-    tools:context="com.sanxynet.rlocks.LockScreenActivity">
+    tools:context=".LockScreenActivity">
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/image_background"
-        android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
         android:scaleType="fitXY"
-        android:src="@drawable/iklan"
-        android:adjustViewBounds="true" />
+        android:src="@drawable/iklan" />
 
     <com.sanxynet.rlocks.UnlockBar
         android:id="@+id/unlock"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="@dimen/padding_10" />
 </RelativeLayout>

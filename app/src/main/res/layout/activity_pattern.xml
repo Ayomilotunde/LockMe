@@ -12,29 +12,29 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/profile_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="36dp"
-        android:fontFamily="sans-serif-thin"
-        android:gravity="center"
-        android:maxLines="1"
-        android:text="@string/create_pattern"
-        android:textColor="@color/white"
-        android:textSize="34sp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/padding_35"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/create_pattern"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_35" />
 
-    <com.andrognito.patternlockview.PatternLockView
-        android:id="@+id/patter_lock_view"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        app:aspectRatio="square"
-        app:aspectRatioEnabled="true"
-        app:dotAnimationDuration="150"
-        app:dotCount="3"/>
+        <com.andrognito.patternlockview.PatternLockView
+            android:id="@+id/patter_lock_view"
+            android:layout_width="@dimen/padding_300"
+            android:layout_height="@dimen/padding_300"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/padding_35"
+            app:aspectRatio="square"
+            app:aspectRatioEnabled="true"
+            app:dotAnimationDuration="150"
+            app:dotCount="3" />
 
     </LinearLayout>
 

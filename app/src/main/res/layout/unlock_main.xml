@@ -1,84 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="80dp"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:padding="10dp">
+    android:layout_height="@dimen/padding_80"
+    android:padding="@dimen/padding_10">
 
-    <ImageView
-        android:layout_height="match_parent"
+    <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:src="@drawable/unlock_right"
-        android:contentDescription="@string/unlock_unlocked"
-        android:adjustViewBounds="true" />
-
-
-    <ImageView
-
         android:layout_height="match_parent"
-        android:layout_width="wrap_content"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/unlock_right"
+        android:layout_alignParentStart="true"
+        android:adjustViewBounds="true"
         android:contentDescription="@string/unlock_unlocked"
-        android:adjustViewBounds="true" />
+        android:src="@drawable/unlock_right" />
 
 
+    <androidx.appcompat.widget.AppCompatImageView
+
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/unlock_unlocked"
+        android:src="@drawable/unlock_right" />
 
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_label"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center"
         android:text="@string/unlock_instructions"
         android:textColor="@android:color/white"
         android:textSize="18sp"
-        android:visibility="gone"
-        android:textStyle="italic" />
+        android:textStyle="italic"
+        android:visibility="gone" />
 
 
-
-
-
-    <ImageView
-        android:layout_height="20dp"
-        android:layout_width="20dp"
-        android:layout_marginRight="10dp"
-        android:src="@drawable/arrow_left"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/padding_20"
+        android:layout_height="@dimen/padding_20"
         android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/padding_10"
         android:layout_toStartOf="@+id/imageCenter"
-        android:adjustViewBounds="true" />
-
-    <ImageView
-        android:id="@+id/imageCenter"
-        android:layout_height="match_parent"
-        android:layout_width="wrap_content"
-        android:src="@drawable/unlock_left"
-        android:contentDescription="@string/unlock_locked"
         android:adjustViewBounds="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:src="@drawable/arrow_left" />
 
-
-    <ImageView
-        android:layout_height="20dp"
-        android:layout_width="20dp"
-        android:layout_marginLeft="10dp"
-        android:src="@drawable/arrow_right"
-        android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/imageCenter"
-        android:adjustViewBounds="true" />
-
-    <ImageView
-        android:id="@+id/img_thumb"
-        android:layout_height="match_parent"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageCenter"
         android:layout_width="wrap_content"
-        android:src="@drawable/unlock_thumb"
-        android:layout_alignParentLeft="true"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/unlock_locked"
+        android:src="@drawable/unlock_left" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/padding_20"
+        android:layout_height="@dimen/padding_20"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_toEndOf="@+id/imageCenter"
+        android:adjustViewBounds="true"
+        android:src="@drawable/arrow_right" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_thumb"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:adjustViewBounds="true"
         android:contentDescription="@string/unlock_thumb"
-        android:adjustViewBounds="true" />
+        android:src="@drawable/unlock_thumb" />
 
 
 </RelativeLayout>

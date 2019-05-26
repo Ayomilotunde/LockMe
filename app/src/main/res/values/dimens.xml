@@ -7,4 +7,14 @@
     <dimen name="activity_dialog_content_size">5sp</dimen>
     <dimen name="activity_dialog_positive_button_size">6sp</dimen>
     <dimen name="activity_dialog_negative_button_size">6sp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_80">80dp</dimen>
+    <dimen name="padding_40">40dp</dimen>
+    <dimen name="padding_35">35dp</dimen>
+    <dimen name="padding_300">300dp</dimen>
+
+
+
+    <dimen name="text_35">35sp</dimen>
 </resources>
