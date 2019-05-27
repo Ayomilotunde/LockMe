@@ -13,18 +13,19 @@ Crude operation on [Back4app](https://back4app.com/) parse server.
 
 ## What Will I Learn?
 In this project you will:
-* Registration
-* Login
-* Reset Password
-* Select image from device memory
-* Select start and end time
-* Select date
-* Upload image, time and date to [Back4app](https://back4app.com/) parse server
+* Lock android device
+* Set pattern lock
+* Set pin lock
+* Clear pin and pattern lock
+* Switch on or off lock screen
+* Get image from database to display on lockscreen
 
 
 ## Used Libraries
-* [ButterKnife](http://jakewharton.github.io/butterknife/)
-* [CircleImageView](https://github.com/hdodenhof/CircleImageView)
+* [Parse SDK](https://github.com/parse-community/Parse-SDK-Android)
+* [Picasso](https://github.com/square/picasso)
+* [PatternLockView](https://github.com/aritraroy/PatternLockView)
+* [Amirarcane](https://github.com/amirarcane/lock-screen)
 
 
 
