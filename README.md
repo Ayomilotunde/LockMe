@@ -34,7 +34,7 @@ Yusuf Adefolahan
 
 ## License
 
-SanxynetAds App is made available under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+LockMe App is made available under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 ```
 MIT License
 
